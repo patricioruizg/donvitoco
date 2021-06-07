@@ -1,0 +1,185 @@
+{% extends 'inicio.html' %}
+{% load static %}
+
+{% block content %}
+
+   
+<div class="yellow_bg">
+    <div class="container">
+             <div class="row">
+                <div class="col-md-12">
+                   <div class="title">
+                      <h2>Nuestros platos</h2>
+                     
+                   </div>
+                </div>
+             </div>
+           </div>
+ </div>
+     <!-- section -->
+     <section class="resip_section">
+         <div class="container">
+             <div class="row">
+                
+                <div class="col-md-12">
+                    <div class="owl-carousel owl-theme">
+        
+                        <div class="item">
+
+                            <div class="product_blog_img">
+                                <img src={% static "images/bebidas.jpg" %} alt="#" />
+                            </div>
+
+                            <div class="product_blog_cont">
+                                <h3>bebidas</h3>
+                                <h4><span class="theme_color">$</span>1000</h4>
+                            </div>
+
+                        </div>
+
+                        <div class="item">
+
+                            <div class="product_blog_img">
+                                <img src={% static "images/churrasco_solo.jpg" %} alt="#" />
+                            </div>
+
+                            <div class="product_blog_cont">
+                                <h3>churrasco</h3>
+                                <h4><span class="theme_color">$</span>1500</h4>
+                            </div>
+
+                        </div>
+
+                        <div class="item">
+
+                            <div class="product_blog_img">
+                                <img src={% static "images/empanadas.jpg" %} alt="#" />
+                            </div>
+
+                            <div class="product_blog_cont">
+                                <h3>empanadas</h3>
+                                <h4><span class="theme_color">$</span>1000</h4>
+                            </div>
+
+                        </div>
+
+                        <div class="item">
+
+                            <div class="product_blog_img">
+                                <img src={% static "images/papas_fritas.jpg" %} alt="#" />
+                            </div>
+
+                            <div class="product_blog_cont">
+                                <h3>papas fritas</h3>
+                                <h4><span class="theme_color">$</span>1000</h4>
+                            </div>
+
+                        </div>
+
+                        <div class="item">
+
+                            <div class="product_blog_img">
+                                <img src={% static "images/pizza.jpg" %} alt="#" />
+                            </div>
+
+                            <div class="product_blog_cont">
+                                <h3>pizza</h3>
+                                <h4><span class="theme_color">$</span>5000</h4>
+                            </div>
+
+                        </div>
+
+                        <div class="item">
+
+                            <div class="product_blog_img">
+                                <img src={% static "images/hamburguesa.jpg" %} alt="#" />
+                            </div>
+
+                            <div class="product_blog_cont">
+                                <h3>hamburguesas</h3>
+                                <h4><span class="theme_color">$</span>3000</h4>
+                            </div>
+
+                        </div>
+
+                        <div class="item">
+
+                            <div class="product_blog_img">
+                                <img src={% static "images/churrascos.jpg" %} alt="#" />
+                            </div>
+
+                            <div class="product_blog_cont">
+                                <h3>Chacareros</h3>
+                                <h4><span class="theme_color">$</span>3000</h4>
+                            </div>
+
+                        </div>
+
+                    </div>
+        
+                    </div>
+                </div>
+             </div>
+             <br>
+
+
+             <div class="row">
+                 <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                          <center><h2>Tu pedido esta aqui</h2></center>
+                        </div>
+
+                        <table class="table">
+                            <thead>
+                              <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">nombre</th>
+                                <th scope="col">precio</th>
+                                <th scope="col">cantidad</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">1</th>
+                                <td>empanada</td>
+                                <td>$1000</td>
+                                <td>5</td>
+                              
+                              </tr>
+                              <tr>
+                                <th scope="row">2</th>
+                                <td>chaparrita</td>
+                                <td>$1000</td>
+                                <td>2</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">3</th>
+                                <td>papas fritas</td>
+                                <td>$1200</td>
+                                <td>1</td>
+                              </tr>
+
+                              <tr class="table-active">
+                                <th scope="row"></th>
+                                <td>total</td>
+                                <td>$23200</td>
+                                <td></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        
+                          <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                            <button class="send" style="background-color: #e3d105;">Whatsapp</button>
+                        </div>
+
+                      </div>
+                 </div>
+             </div>
+
+             
+         </div>
+     </section>
+ 
+
+    {% endblock %}
