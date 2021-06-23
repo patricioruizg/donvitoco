@@ -6,6 +6,7 @@ class usuario(models.Model):
     email=models.EmailField()
     password=models.CharField(max_length=50)
     nombre=models.CharField(max_length=50)
+    telefono=models.IntegerField()
 
 class cliente(models.Model):
     nombre=models.CharField(max_length=50)
@@ -25,3 +26,7 @@ class administrado(models.Model):
     nombre=models.CharField(max_length=50)
     correo=models.EmailField()
     password=models.CharField(max_length=50)
+
+class producto(models.Model):
+    nombre=models.CharField(max_length=50)
+    precio=models.IntegerField()

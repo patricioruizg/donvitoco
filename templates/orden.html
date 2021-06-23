@@ -1,0 +1,72 @@
+{% extends 'build.html' %}
+{% load static %}
+
+
+
+{% block entrada %}
+
+
+{% if user.is_authenticated %}
+<div class="row">
+
+  <div class="col-lg-6 bg-white" >
+      <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Precio</th>
+     
+    </tr>
+  </thead>
+  <tbody>
+      {% for registro in lista %}
+    <tr>
+      <th scope="row">{{registro.id}}</th>
+      <td>{{registro.nombre}}</td>
+      <td>{{registro.precio}}</td>
+      
+    </tr>
+    {% endfor %}
+    
+  </tbody>
+</table>
+  </div>
+  
+  <div class="col-lg-6 bg-white" >
+      <h2>agregar producto</h2>
+
+      <form method="POST">
+          {% csrf_token %}
+          {{form}}
+          <button type="submit">enviar</button>
+      </form>
+  </div>
+</div>
+{% else %}
+<div class="col-lg-8 bg-white text-center" >
+  <table class="table">
+<thead>
+<tr>
+  <th scope="col">#</th>
+  <th scope="col">Nombre</th>
+  <th scope="col">Precio</th>
+ 
+</tr>
+</thead>
+<tbody>
+  {% for registro in lista %}
+<tr>
+  <th scope="row">{{registro.id}}</th>
+  <td>{{registro.nombre}}</td>
+  <td>{{registro.precio}}</td>
+  
+</tr>
+{% endfor %}
+
+</tbody>
+</table>
+</div>
+{% endif %}
+
+{% endblock %}

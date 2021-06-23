@@ -1,0 +1,30 @@
+{% extends 'build.html' %}
+{% load static %}
+
+{% block entrada %}
+<div class="row">
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+            <h2>ingresa a tu cuenta</h2>                
+            <form class="main_form" method="POST">
+                <div class="row">
+                
+                    {% load crispy_forms_tags %}
+                    {% csrf_token %}
+                    {{form|crispy}}
+                    
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                        <button class="send">Login</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+            <div class="img-box">
+                <figure><img src={% static "images/img.jpg" %} alt="img" /></figure>
+            </div>
+        </div>
+</div>
+
+
+{% endblock %}

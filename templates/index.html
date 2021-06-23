@@ -1,26 +1,16 @@
-{% extends 'inicio.html' %}
-{% load static %}
-
-
-
+{% extends 'build.html' %}
 
 {% block content %}
+{% include 'slider.html' %}
+<!-- end slider section -->
 
+
+<!-- section -->
 {% include 'section.html' %}
- 
-<div class="bg_bg">
-<!-- about -->
-{% include 'about.html' %}
-<!-- end about -->
-
-<!-- blog -->
-
-<!-- end blog -->
-
-<!-- Our Client -->
-
-<!-- end Our Client -->
+<div class="row">
+  <div class="col">
+    <a class="main_bt_border" style='background-color: yellow;' href="#">Aca tu pedido</a>
+  </div>
 </div>
 
 {% endblock %}
-   

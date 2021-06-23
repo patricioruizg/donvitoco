@@ -1,0 +1,33 @@
+
+     <div class="sidebar">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+
+            <div id="dismiss">
+                <i class="fa fa-arrow-left"></i>
+            </div>
+
+            <ul class="list-unstyled components">
+
+                <li>
+                    <a href="inicio">Home</a>
+                </li>
+
+               
+                <li>
+                    <a href="orden">productos</a>
+                </li>
+                {% if user.is_authenticated %}
+                <li>
+                    <a href="usuarios">clientes</a>
+                </li>
+                <li>
+                    <a href="blog.html">Blog</a>
+                </li>
+                <li>
+                    <a href="contact.html">Contact Us</a>
+                </li>
+            </ul>
+            {% endif %}
+        </nav>
+    </div>

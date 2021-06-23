@@ -1,35 +1,50 @@
 {% load static %}
-   <!-- header -->
-    <header>
-        <div class="container-fluid">
-            <div class="row" >
-                <div class="col-md-3">
-                    <div class="full">
-                        <a class="logo" href="inicio"><img src={% static 'images/logo(1).png' %} alt="#" / style="width: 6em;"></a>
-                    </div>
+<header>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="full">
+                    <a class="logo" href="{% url 'inicio' %}"><img src={% static "images/logo(1).png" %} style="width: 6em;" alt="#" /></a>
                 </div>
-                <div class="col-md-9">
-                    <div class="full">
-                        <div class="right_header_info">
-                            <ul>
-                                <li>
-                                   Contacto: +569 31389331
-                                </li>
+            </div>
+            <div class="col-md-9">
+                <div class="full">
+                    <div class="right_header_info">
+                        <ul>
+                            <li class="dinone">Contacto : <img style="margin-right: 15px;margin-left: 15px;" src={% static "images/phone_icon.png" %} alt="#"><a href="#">987-654-3210</a></li>
+                            
+                           
+                            
+                            <li class="dinone"><img style="margin-right: 15px;height: 21px;position: relative;top: -2px;" src={% static "images/location_icon.png" %} alt="#"><a href="#">Coquimbo, chile</a></li>
+                            
+                            {% if user.is_authenticated %}
+                            <li class="button_user">
+                                <a class="button" href="{% url 'logout' %}">Salir de sesion</a>
+
                                
-                                <li>
-                                    <a href="https://www.google.com/maps" target="_blank">Dirreccion </a>
-                                </li>
-                                
-                                <li>
-                                    <button type="button" id="sidebarCollapse">
-                                        <img src={% static "images/menu_icon.png" %} alt="#">
-                                    </button>
-                                </li>
-                            </ul>
-                        </div>
+                            
+                            
+                            
+                            <li>
+                            {% else %}
+                            <li class="button_user">
+                                <a class="button" href="{% url 'login' %}">Ingresar</a>
+
+                                <a class="button" href="{% url 'register' %}">Registro</a></li>
+                            
+                            
+                            
+                            <li>
+                            {% endif %}
+                            
+                                <button type="button" id="sidebarCollapse">
+                                    <img src={% static "images/menu_icon.png" %} alt="#">
+                                </button>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
-    </header>
-    <!-- end header -->
+    </div>
+</header>
